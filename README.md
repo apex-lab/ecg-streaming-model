@@ -1,0 +1,5 @@
+This repository contains the computational model used in our manuscript ["Listening with your heart: The heartbeat shapes auditory object formation by suppressing the early neural response to sound."](https://doi.org/10.64898/2026.08.17.745255)
+
+`streaming.ipynb` contains the [Julia](https://julialang.org/) code for running model simulations. You will need to install [`DifferentialEquations.jl`](https://docs.sciml.ai/DiffEqDocs/stable/tutorials/sde_example/) (and `StochasticDiffEq.jl` if it doesn't install automatically) to run those simulations. Plots are made with `Plots.jl`, which may also need to be installed. 
+
+`streaming.ipynb` outputs simulation results into `systole.jld` and `diastole.jld`. These are used by Python notebook `power.ipynb` for power analysis. You need `pymer4` installed for the power analysis. You can use the [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) environment `analysis-env.yml`, which includes `pymer4`, found with the [analysis code](https://doi.org/10.5281/zenodo.21432866) for our empirical experiment.
